@@ -1,4 +1,4 @@
-name: CI/CD Demo con Tests
+name: CI/CD Demo con Docker
 
 on:
   push:
@@ -7,8 +7,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build-test-docker:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -23,3 +24,9 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Build Docker image
+        run: docker build -t demo-ci-cd .
+
+      - name: Run Docker container
+        run: docker run -d -p 3000:3000 demo-ci-cd
