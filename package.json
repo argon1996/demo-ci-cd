@@ -1,12 +1,13 @@
 {
   "name": "demo-ci-cd",
   "version": "1.0.0",
-  "description": "Proyecto demo CI/CD con Jest",
+  "description": "Proyecto demo CI/CD con Jest y Supertest",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.0.0",
+    "supertest": "^6.3.3"
   }
 }
