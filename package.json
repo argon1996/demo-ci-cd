@@ -1,0 +1,12 @@
+{
+  "name": "demo-ci-cd",
+  "version": "1.0.0",
+  "description": "Proyecto demo CI/CD con Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
